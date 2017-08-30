@@ -59,10 +59,84 @@ post '/events' do
 		event = data.event
 		if event.subtype && event.subtype == "file_share"
           case event.file.name
-            when "test1.jpeg"
-              urls = "check this out:\nhttps://www.walmart.com/search/?query=laptop&typeahead=lapto"
-            when "test2.jpg"
-              urls = "here you go:\nhttps://www.walmart.com/search/?query=pen&cat_id=0"
+            when "desktop.jpeg"
+				attachments = [
+                {
+                 "title": "Hisense Chromebook (11.6\" Quad-Core Processor)",
+                 "title_link": "https://www.walmart.com/ip/Hisense-Chromebook-11-6-Quad-Core-Processor/44389793",
+                 "image_url": "https://i5.walmartimages.com/asr/123311b1-f24f-4d2c-ab51-1dfc3d9c77f3_1.9431c6c1b3d3e948781e77ccf72dae15.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+                },
+                {
+                 "title":"ADD TO CART",
+                 "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D44389793%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"
+                },
+                {
+                 "title": "Acer CB3-532-C47C 15.6\" Chromebook, Chrome OS, Intel Celeron N3060 Dual-Core Processor, 2GB RAM, 16GB Internal Storage",
+                 "title_link": "https://www.walmart.com/ip/Acer-CB3-532-C47C-15-6-Chromebook-Chrome-OS-Intel-Celeron-N3060-Dual-Core-Processor-2GB-RAM-16GB-Internal-Storage/54518466",
+                 "image_url": "https://i5.walmartimages.com/asr/1f79d1f4-18cd-4a2a-a3b3-b05161a297b2_1.0766857900119a422e0a9d2844938dcd.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+                },
+                {
+                 "title":"ADD TO CART",
+                 "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D54518466%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"
+                },
+                {
+                 "title": "Refurbished HP Pavilion x360 15-bk020wm 15.6\" Laptop, Touchscreen, 2-in-1, Windows 10 Home, Intel Core i5-6200U Processor, 8GB RAM, 1TB Hard Drive",
+                 "title_link": "https://www.walmart.com/ip/Refurbished-HP-Pavilion-x360-15-bk020wm-15-6-Laptop-Touchscreen-2-in-1-Windows-10-Home-Intel-Core-i5-6200U-Processor-8GB-RAM-1TB-Hard-Drive/54946694",
+                 "image_url": "https://i5.walmartimages.com/asr/66af0b1e-45ce-440b-bdf0-de0c58aabafa_1.833bc7c1946dd0ada30a1ed3336af7fe.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+                },
+                {
+                 "title":"ADD TO CART",
+                 "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D54946694%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"
+                },
+                {
+                 "title": "Dell Inspiron i355210040BLK 15.6\" Laptop, Windows 10 Home, Intel Pentium N3710 Processor, 8GB RAM, 1TB Hard Drive",
+                 "title_link": "https://www.walmart.com/ip/Dell-Inspiron-i355210040BLK-15-6-Laptop-Windows-10-Home-Intel-Pentium-N3710-Processor-8GB-RAM-1TB-Hard-Drive/54748226",
+                 "image_url": "https://i5.walmartimages.com/asr/6cd21649-69bf-4bc3-b46d-633d4cbe55e6_1.8fee7db0277425fbb384a80fb40a1c04.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+                },
+                {
+                 "title":"ADD TO CART",
+                 "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D54748226%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"
+        }
+    ].to_json
+            when "infant_milk.jpeg"
+              attachments = [        
+                  {
+                    "title": "Similac Pro-Advance Infant Formula",
+                    "title_link": "https://www.walmart.com/ip/Similac-Pro-Advance-Infant-Formula-with-2-FL-Human-Milk-Oligosaccharide-HMO-for-Immune-Support-23-2-ounces-Pack-of-4/54427941",
+                    "image_url": "https://i5.walmartimages.com/asr/4b90f2dc-9d5e-4c5f-af5a-49bac41d01aa_1.77bdf65f715e20f36aa5b4e81233f021.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+                  },
+                  {
+                    "title":"ADD TO CART",
+                    "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D54427941%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapihttp://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D10308169%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"
+                  },
+                  {
+                    "title": "Gerber Good Start Gentle Milk Based Powder",
+                    "title_link": "https://www.walmart.com/ip/Gerber-Good-Start-Gentle-Milk-Based-Powder-Infant-Formula-with-Iron-1-Birth-12-Months-12-7-oz/14662909",
+                    "image_url": "https://i5.walmartimages.com/asr/119df6f9-3b49-4bc7-b912-ec3b69f14ce7_1.a123916bbeb0886ba42df9bba5f10277.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+                  },
+                  {
+                    "title":"ADD TO CART",
+                    "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D14662909%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapihttp://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D10308169%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"
+                  },
+                  {
+                    "title": "Similac Advance Infant Formula with Iron, Powder, 1.45 lb",
+                    "title_link": "https://www.walmart.com/ip/Similac-Advance-Infant-Formula-with-Iron-Powder-1-45-lb/14018007",
+                    "image_url": "https://i5.walmartimages.com/asr/168c9137-ade5-4e6d-b931-03d7d8ce52b0_1.f78c2cb3b4f7f332f42f3431486e848c.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+                  },
+                  {
+                    "title":"ADD TO CART",
+                    "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D14018007%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapihttp://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D10308169%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"
+                  },
+                  {
+                    "title": "Pure Bliss by Similac Infant Formula",
+                    "title_link": "https://www.walmart.com/ip/Pure-Bliss-by-Similac-Infant-Formula-Starts-with-Fresh-Milk-from-Grass-Fed-Cows-31-8-ounces-Pack-of-4/54430593",
+                    "image_url": "https://i5.walmartimages.com/asr/7b37c02a-08f7-4b7e-9bf0-c18f35909542_1.91cef337f6b2d8bccb749a185678be80.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+                  },
+                  {
+                    "title":"ADD TO CART",
+                    "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D54430593%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapihttp://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D10308169%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"
+                  }
+              ].to_json
           end
         else
           case event.text

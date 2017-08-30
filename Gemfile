@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+gem 'sinatra'
+gem 'rest-client'
+gem 'faye-websocket'
+gem 'eventmachine'
+gem 'slack-ruby-bot'
+gem 'http'

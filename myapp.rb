@@ -68,14 +68,61 @@ post '/events' do
           case event.text
             when /^hi|hello|hey.*/
               urls = "Hi! Nice to meet you. I am Ody, the walmart.com shopping assistant! You can paste an url or upload an image here. I will try my best to find the most relevant products for you from walmart.com."
-            when "<http://pcmag.com/article2/0,2817,2475954,00.asp>"
-			  attachments = [{"title": "Arlo Pro System","text":"https://www.walmart.com/ip/Arlo-Pro-System-Rechargeable-Wire-Free-HD-Security-Camera-with-Audio-and-Siren-VMS4130-100NAS-by-NETGEAR/55150123","image_url": "https://i5.walmartimages.com/asr/eae4eaf7-5a30-4c54-bc90-a5a76c80cdfe_1.bf351a6533ad2f36917f501ed144996a.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"},
-				  {"title": "Nest Cam Outdoor Security Camera","text":"https://www.walmart.com/ip/Nest-Cam-Outdoor-Security-Camera/155798632","image_url": "https://i5.walmartimages.com/asr/b199c0d9-86aa-42f1-ac3f-3637ef56efd3_1.fce069482ad72486a7e0b97dd61c81af.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"},
-				  {"title": "Canary Security Device All-in-One","text":"https://www.walmart.com/ip/Canary-Security-Device-All-in-One-Home-Security-Solution-White/44443683","image_url": "https://i5.walmartimages.com/asr/9117c758-b80f-466c-bd80-7477a12e9ec7_1.bff26206edca124c038793c4ff62f9e3.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"},
-				  {"title": "Nest Labs Nest Cam Wireless Video Camera","text":"https://www.walmart.com/ip/Nest-Labs-Nest-Cam-Wireless-Video-Camera/45806610","image_url": "https://i5.walmartimages.com/asr/7f8f832a-ea2e-4cb0-85b1-189ececd26a1_1.9578978131fdc2df2c892a8861016802.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"}].to_json
+            when "<https://www.babycenter.com/best-convertible-car-seat>"
+			  attachments = [
+        {			
+            "title": "Graco 4Ever All-in-1 Convertible Car Seat",
+			      "title_link": "https://www.walmart.com/ip/Graco-4Ever-All-in-1-Convertible-Car-Seat-Choose-Your-Pattern/46335604",
+			      "image_url":"https://i5.walmartimages.com/asr/b27da759-3f31-4727-a22f-3d7bc1c41a07_1.02cf3c75fc81a513eed09a662e59266e.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+        }, 
+        {"title":"Add To Cart", "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D46335604%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"},
+        {			
+            "title": "Graco Contender 65 Convertible Car Seat",
+			      "title_link": "https://www.walmart.com/ip/Graco-Contender-65-Convertible-Car-Seat-Choose-Your-Pattern/33396182",
+			      "image_url":"https://i5.walmartimages.com/asr/328b980a-9762-422a-8f8d-53bf171b3ff5_1.b6eff89073debf58491355b572ef5936.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+        }, 
+        {"title":"Add To Cart", "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D33396182%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"},
+        {			
+            "title": "Diono Radian RXT Convertible Car Seat",
+			      "title_link": "https://www.walmart.com/ip/Diono-Radian-RXT-Convertible-Car-Seat-Black-Cobalt/50878012",
+			      "image_url":"https://i5.walmartimages.com/asr/0303efbc-d205-4c51-bd39-139af9e831f6_1.939d16a6711f79943f3b21bd347d45d3.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+        }, 
+        {"title":"Add To Cart", "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D50878012%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"},
+        {			
+            "title": "Britax Marathon ClickTight Convertible Car Seat",
+			      "title_link": "https://www.walmart.com/ip/Britax-Marathon-ClickTight-Convertible-Car-Seat-Vue/55425979",
+			      "image_url":"https://i5.walmartimages.com/asr/61a8921a-b7a9-4401-8492-30a460bae83d_1.b8efebb059f3922398599d3919743129.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+        }, 
+        {"title":"Add To Cart", "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D55425979%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"}        
+    ].to_json
 
-            when "<http://wm6.walmart.com/recipe/Parmesan-Butternut-Squash-Gratin>"
-              urls = "check what I've found\nhttps://www.walmart.com/ip/Ferry-Morse-Fm-Foil-Squash-Dark-Green-Zucchini/179445110\nhttps://www.walmart.com/ip/LAND-O-LAKES-Margarine-1-lb-Box/10291054\nhttps://grocery.walmart.com/product/3000100169\nhttps://www.walmart.com/ip/Progresso-Plain-Panko-Crispy-Bread-Crumbs-8-oz/10320633\nhttps://www.walmart.com/ip/Progresso-Plain-Panko-Crispy-Bread-Crumbs-8-oz/10320633"
+            when "<http://www.parents.com/fun/entertainment/books/best-childrens-books-of-the-year/>"
+              attachments = [
+        {			
+            "title": "Big Fish Little Fish",
+			      "title_link": "https://www.walmart.com/ip/Big-Fish-Little-Fish/49207133",
+			      "image_url":"http://images.parents.mdpcdn.com/sites/parents.com/files/styles/width_360/public/102787324.jpg"
+        }, 
+        {"title":"Add To Cart", "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D49207133%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"},
+        {			
+            "title": "TouchThinkLearn: ABC",
+			      "title_link": "https://www.walmart.com/ip/ABC/51797530",
+			      "image_url":"https://www.walmart.com/ip/Graco-Contender-65-Convertible-Car-Seat-Choose-Your-Pattern/33396182"
+        }, 
+        {"title":"Add To Cart", "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D51797530%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"},
+        {			
+            "title": "GOODNIGHT EVERYONE",
+			      "title_link": "https://www.walmart.com/ip/GOODNIGHT-EVERYONE/912129766",
+			      "image_url":"https://i5.walmartimages.com/asr/10b7cf0a-ebd6-4444-a030-8b93398ac4a2_1.5a608ea2e6bdacc29443ef5b278c2a53.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+        }, 
+        {"title":"Add To Cart", "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D912129766%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"},
+        {			
+            "title": "The Cookie Fiasco",
+			      "title_link": "https://www.walmart.com/ip/The-Cookie-Fiasco/52609219",
+			      "image_url":"https://i5.walmartimages.com/asr/c7a3da62-aefe-4176-a6eb-026f93d4005b_1.d9bdfc55775f3018e684afc58e330704.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
+        }, 
+        {"title":"Add To Cart", "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D52609219%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"}
+    ].to_json
             when "<https://www.makeupalley.com/>"
               urls = "check what I've found\nhttps://www.walmart.com/ip/Orly-Bonder-Rubberized-Base-Coat-0-3-oz/227372525\nhttps://www.walmart.com/ip/wet-n-wild-Photo-Focus-Concealer-Wand-Light-Ivory/123328886\nhttps://www.walmart.com/ip/Estee-Lauder-Advanced-Night-Repair-Synchronized-Recovery-Complex-II-75ml-2-5oz/127132304\nhttps://www.walmart.com/ip/Estee-Lauder-Double-Wear-Stay-In-Place-Makeup-SPF-10-No-01-Fresco-2C3-30ml-1oz/152329402"
             when "<https://ezinearticles.com/?cat=Home-Improvement:Furniture>"
@@ -90,8 +137,7 @@ post '/events' do
       options = {
 	  token: @team.bot["bot_access_token"],
 	  channel: data["event"]["channel"],
-	  text: urls,
-	  unfurl_links: true,
+	  text: "Here is what I found:",
 	  as_user: false,
 	  attachments: attachments
 	  }

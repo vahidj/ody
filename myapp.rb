@@ -186,7 +186,7 @@ post '/events' do
         {			
             "title": "TouchThinkLearn: ABC",
 			      "title_link": "https://www.walmart.com/ip/ABC/51797530",
-			      "image_url":"https://www.walmart.com/ip/Graco-Contender-65-Convertible-Car-Seat-Choose-Your-Pattern/33396182"
+			      "image_url":"https://i5.walmartimages.com/asr/fb97fd60-807c-4b5f-8478-b91a792d57af_1.a93be4baae2a273a93aa1c940e7f5235.jpeg?odnHeight=200&odnWidth=200&odnBg=FFFFFF"
         }, 
         {"title":"ADD TO CART", "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D51797530%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"},
         {			
@@ -202,7 +202,7 @@ post '/events' do
         }, 
         {"title":"ADD TO CART", "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D52609219%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"}
     ].to_json
-            when "<https://ezinearticles.com/?cat=Home-Improvement:Furniture>>"
+            when "<https://ezinearticles.com/?cat=Home-Improvement:Furniture>"
 			  textObj = "Here is what I found:"
               attachments = [
                 {

@@ -144,8 +144,8 @@ post '/events' do
           end
         else
           case event.text
-            when /^hi|hello|hey.*/
-              urls = "Hi! Nice to meet you. I am Ody, the walmart.com shopping assistant! You can paste an url or upload an image here. I will try my best to find the most relevant products for you from walmart.com."
+            when /^hi|hello|hey|Hi|Hello|Hey.*/
+              textObj = "Hi! Nice to meet you. I am Ody, the walmart.com shopping assistant! You can paste an url or upload an image here. I will try my best to find the most relevant products for you from walmart.com."
             when "<https://www.babycenter.com/best-convertible-car-seat>"
 			  textObj = "Here is what I found:"
 			  attachments = [

@@ -55,8 +55,8 @@ post '/events' do
     return {challenge: data["challenge"]}.to_json
   end
     case data.type
-	  textObj = "Please enter a url or paste an image!!"
 	  when "event_callback"
+		textObj = "Please enter a url or paste an image!!"
 		event = data.event
 		if event.subtype && event.subtype == "file_share"
           case event.file.name

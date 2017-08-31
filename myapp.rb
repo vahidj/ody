@@ -50,6 +50,7 @@ end
 post '/events' do
   request.body.rewind
   data = JSON.parse(request.body.read, object_class: OpenStruct)
+  puts "=====================" << data.to_s
   if data["type"] == "url_verification"
     content_type :json
     return {challenge: data["challenge"]}.to_json
@@ -296,11 +297,11 @@ post '/events' do
 	  attachments: attachments
 	  }
 
-	  puts "========================" << data.event.bot_id.to_s
+	  #puts "========================" << data.event.bot_id.to_s
 	  if !data.event || !data.event.bot_id
         #| data["event"]["bot_id"] != "B6VSYB7TQ"
 	    res = RestClient.post 'https://slack.com/api/chat.postMessage', options, content_type: :json
-	    p res.body
+	    #p res.body
 	  end
   end
   #request.body.rewind

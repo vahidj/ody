@@ -55,12 +55,13 @@ post '/events' do
     return {challenge: data["challenge"]}.to_json
   end
     case data.type
+	  textObj = "Please enter a url or paste an image!!"
 	  when "event_callback"
 		event = data.event
 		if event.subtype && event.subtype == "file_share"
           case event.file.name
             when "desktop.jpeg"
-				text = "Here is what I found:"
+				textObj = "Here is what I found:"
 				attachments = [
                 {
                  "title": "Hisense Chromebook (11.6\" Quad-Core Processor)",
@@ -100,7 +101,7 @@ post '/events' do
         }
     ].to_json
             when "infant_milk.jpeg"
-			  text = "Here is what I found:"
+			  textObj = "Here is what I found:"
               attachments = [        
                   {
                     "title": "Similac Pro-Advance Infant Formula",
@@ -145,7 +146,7 @@ post '/events' do
             when /^hi|hello|hey.*/
               urls = "Hi! Nice to meet you. I am Ody, the walmart.com shopping assistant! You can paste an url or upload an image here. I will try my best to find the most relevant products for you from walmart.com."
             when "<https://www.babycenter.com/best-convertible-car-seat>"
-			  text = "Here is what I found:"
+			  textObj = "Here is what I found:"
 			  attachments = [
         {			
             "title": "Graco 4Ever All-in-1 Convertible Car Seat",
@@ -174,7 +175,7 @@ post '/events' do
     ].to_json
 
             when "<http://www.parents.com/fun/entertainment/books/best-childrens-books-of-the-year/>"
-			  text = "Here is what I found:"
+			  textObj = "Here is what I found:"
               attachments = [
         {			
             "title": "Big Fish Little Fish",
@@ -202,7 +203,7 @@ post '/events' do
         {"title":"ADD TO CART", "title_link":"http://c.affil.walmart.com/t/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D52609219%7C1%26affp1%3Drba2WcSC_JIWqxXZi_v0-wKblIq8dKLZ3Y_MK_UN1qY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi"}
     ].to_json
             when "<https://ezinearticles.com/?cat=Home-Improvement:Furniture>>"
-			  text = "Here is what I found:"
+			  textObj = "Here is what I found:"
               attachments = [
                 {
                  "title": "Right2Home Upholstered Low Profile Bed - Queen",
@@ -243,7 +244,7 @@ post '/events' do
                 ].to_json
 
             when "<https://www.pinterest.com/pin/433823376584880457/>"
-			  text = "Here is what I found:"
+			  textObj = "Here is what I found:"
               attachments = [
                 {
                  "title": "Bread flour",
@@ -283,14 +284,14 @@ post '/events' do
                 }
                 ].to_json
             else
-              text = "Please enter a url or paste an image!!"
+              textObj = "Please enter a url or paste an image!!"
 		  end
 		end
 	  
       options = {
 	  token: @team.bot["bot_access_token"],
 	  channel: data["event"]["channel"],
-	  text: text,
+	  text: textObj,
 	  as_user: false,
 	  attachments: attachments
 	  }

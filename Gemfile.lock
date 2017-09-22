@@ -73,6 +73,7 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    puma (2.11.1)
 
 PLATFORMS
   ruby
@@ -84,6 +85,7 @@ DEPENDENCIES
   rest-client
   sinatra
   slack-ruby-bot
+  puma
 
 BUNDLED WITH
    1.15.4
